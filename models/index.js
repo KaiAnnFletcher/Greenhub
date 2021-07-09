@@ -1,3 +1,5 @@
+/*eslint-env es6*/
+
 module.exports = {
   User: require("./user"),
   Items_1: require("./items_1")

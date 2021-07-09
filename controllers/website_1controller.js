@@ -4,9 +4,12 @@
 
 // Dependencies
 // =============================================================
+
+/*eslint-env es6*/
+
 const Items_1 = require("../models/items_1");
 
-// Defining methods for the recipesController
+// Defining methods for the website_1Controller
 module.exports = {
   findAll: function(req, res) {
     Items_1

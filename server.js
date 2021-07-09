@@ -1,15 +1,16 @@
+/*eslint-env es6*/
 require("dotenv").config();
-var mongoose = require("mongoose");
-var express = require("express");
-var cors = require('cors');
-var bodyParser = require('body-parser');
-var passport = require("passport");
-var logger = require("morgan");
-var db = require("./models")
-var routes = require("./routes");
-var app = express();
-var PORT = process.env.PORT || 3001;
-var path = require('path');
+const mongoose = require("mongoose");
+const express = require("express");
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const passport = require("passport");
+const logger = require("morgan");
+const db = require("./models")
+const routes = require("./routes");
+const app = express();
+const PORT = process.env.PORT || 3001;
+const path = require('path');
 //Define middleware here
 app.use(express.json());
 app.use(bodyParser.json());

@@ -1,6 +1,8 @@
+/*eslint-env es6*/
+
 require("../../controllers/website_1controller");
 require("./website_1");
-var Items_1 = require( "../../models");
+const Items_1 = require( "../../models");
 
 //After scraping the main page, the following function is to save to the database
 

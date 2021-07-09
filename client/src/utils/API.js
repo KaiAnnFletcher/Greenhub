@@ -1,3 +1,5 @@
+/*eslint-env es6*/
+
 import axios from "axios";
 // import sampleData from "./sampleData.json";
 // import cheerio from "cheerio";
@@ -14,7 +16,7 @@ export default {
     },
 
     scrapeBySearch: function(searchString){
-        var parsedString = searchString.replace(/ /g, "%20");
+        const parsedString = searchString.replace(/ /g, "%20");
         return axios.get("/api/website_1/search/" + parsedString)
                     // .then(function(response) {
                     //     console.log(response)

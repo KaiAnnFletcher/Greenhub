@@ -1,3 +1,5 @@
+/*eslint-env es6*/
+
 import React, { Component } from 'react';
 import { Col, Row, Container } from "../Grid";
 import Navbar from "../Navbar";
