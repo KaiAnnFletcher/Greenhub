@@ -41,7 +41,7 @@ result.resultThumbnail = $(this)
 
 console.log(result.resultThumbnail)
 
-const result = {}
+//const result = {}
 //details
 result.resultDetails = $(this)
 //greenheartshop
@@ -50,7 +50,7 @@ result.resultDetails = $(this)
 
 console.log(result.resultDetails)
 
-const result = {}
+//const result = {}
 //link
 result.resultLink = $(this)
 //greenheartshop
@@ -102,7 +102,7 @@ router.get("/search/:search", function (req, res, next) {
 
             console.log(result.resultThumbnail)
 
-            const result = {};
+            //const result = {};
             //details
             result.resultDetails= $(this)
             //greenheartshop
@@ -111,7 +111,7 @@ router.get("/search/:search", function (req, res, next) {
 
             console.log(result.resultDetails)
 
-            const result = {}
+            //const result = {}
             //link
             result.resultLink = $(this)
             //greenheartshop
