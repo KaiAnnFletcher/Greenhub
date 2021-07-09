@@ -228,7 +228,7 @@ async searchWebsite_1() {
                     <p>{data.resultDetails}</p>
                     
                     
-                    <a target = "_blank" href ={data.resultLink}>{data.resultLink}</a>
+                    <a target = "_blank" href ={data.resultLink} rel="noreferrer">{data.resultLink}</a>
                     
                     
                     </Container>
