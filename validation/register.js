@@ -1,5 +1,7 @@
-var Validator = require("validator");
-var isEmpty = require("is-empty");
+/*eslint-env es6*/
+
+const Validator = require("validator");
+const isEmpty = require("is-empty");
 
 module.exports = function validateRegisterInput(data) {
     let errors = {}

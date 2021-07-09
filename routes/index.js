@@ -1,6 +1,8 @@
-var path = require("path");
-var router = require("express").Router();
-var apiRoutes = require("./api");
+/*eslint-env es6*/
+
+const path = require("path");
+const router = require("express").Router();
+const apiRoutes = require("./api");
 
 //API Routes
 //authRouter.use(require('./authenticate').basic(usersdb))

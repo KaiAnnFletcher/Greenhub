@@ -1,7 +1,9 @@
-var router = require("express").Router();
+/*eslint-env es6*/
+
+const router = require("express").Router();
 require("./website_1");
-var website_1Routes = require("./website_1");
-var users = require("./users");
+const website_1Routes = require("./website_1");
+const users = require("./users");
 
 //Website_1 routes
 //http://localhost:3000/api/website_1_function_call/scrape
