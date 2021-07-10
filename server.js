@@ -1,6 +1,7 @@
 /*eslint-env es6*/
 require("dotenv").config();
 const mongoose = require("mongoose");
+const { MongoClient } = require("mongodb");
 const express = require("express");
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -51,7 +52,22 @@ app.get('/*', (req, res) => {
 
 // Connect to the Mongo DB 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/kaibru");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://kaibru_user:kaibru1@ds035488.mlab.com:35488/heroku_tk82nh0f");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://kaibru_user:kaibru1@ds035488.mlab.com:35488/heroku_tk82nh0f");
+const url = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_HOST}/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
+const client = new MongoClient(url);
+
+async function run() {
+  try {
+      await client.connect();
+      console.log("Connected correctly to server");
+  } catch (err) {
+      console.log(err.stack);
+  }
+  finally {
+      await client.close();
+  }
+}
+run().catch(console.dir);
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
