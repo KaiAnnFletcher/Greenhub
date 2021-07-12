@@ -1,4 +1,6 @@
 /*eslint-env es6*/
+const mongoose = require("mongoose");
+mongoose.set('useFindAndModify', false);
 
 const router = require("express").Router();
 const website_1Controller = require("../../controllers/website_1controller")
@@ -18,26 +20,36 @@ router.get("/scrape", function(req, res, next) {
 //instead of simple res.render, user router.get  
 console.log("scraping started...");
 //Grab the html body with axios    
-axios.get("https://greenheartshop.org/").then(function(response) {
+axios.get("https://food52.com/shop/home?").then(function(response) {
 //Load to cheerio and save to $ selector
-    console.log("Scraping all greenheartshop mainpage...");
+    console.log("Scraping all Food52 mainpage...");
     const $ = cheerio.load(response.data);
     const output = [];
     const promises = [];
 
 //Now we need to grab the title reference for each article
-$("article").each(function(i, element) {
+$("main").each(function(i, element) {
 
 //save empty result object
 const result = {};
 //thumbnail
 result.resultThumbnail = $(this)
 //greenheartshop
-.children("figure.product-item-thumbnail")
-.children("a")
-.children("div.replaced-image.ratio-1-1")
-.children("img")
-.attr("src")
+//.children("div.shop__grid js-ga-product-container").html()
+// .children("div.shop__item")
+// .children("div.product-tile__container ")
+// .children("a")
+// .children("div.product-tile__img")
+// .children("div.css-rli351")
+// .children("div.css-1kdubnn")
+// .children("img")
+// .attr("src")
+//.children("dl.price price--listing price--on-sale")
+//.children("figure.product-item-thumbnail")
+//.children("a")
+//.children("div.replaced-image.ratio-1-1")
+//.children("img")
+//.attr("src")
 
 console.log(result.resultThumbnail)
 
@@ -45,8 +57,12 @@ console.log(result.resultThumbnail)
 //details
 result.resultDetails = $(this)
 //greenheartshop
-.children("div.product-item-details")
-.text()
+// .children("div.product-tile__details")
+// .children("h3.product-tile__details-heading")
+// .children("span.product-tile__title")
+// .text()
+//.children("div.product-item-details")
+//.text()
 
 console.log(result.resultDetails)
 
@@ -54,9 +70,14 @@ console.log(result.resultDetails)
 //link
 result.resultLink = $(this)
 //greenheartshop
-.children("figure.product-item-thumbnail")
-.children("a")
-.attr("href")
+// .children("div.shop__grid js-ga-product-container")
+// .children("div.shop__item")
+// .children("div.product-tile__container")
+// .children("a")
+// .attr("href")
+// .children("figure.product-item-thumbnail")
+// .children("a")
+// .attr("href")
 
 console.log(result.resultLink)
 

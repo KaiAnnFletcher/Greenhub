@@ -58,7 +58,7 @@ const client = new MongoClient(url);
 
 async function run() {
   try {
-      await client.connect();
+      await client.connect({ useUnifiedTopology: true });
       console.log("Connected correctly to server");
   } catch (err) {
       console.log(err.stack);
