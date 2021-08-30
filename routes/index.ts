@@ -1,7 +1,9 @@
 /*eslint-env es6*/
 
+import * as express from "express";
+
 const path = require("path");
-const router = require("express").Router();
+const router = express.Router();
 const apiRoutes = require("./api");
 
 //API Routes
@@ -15,4 +17,4 @@ console.log("API Routes hit")
    res.sendFile(path.join(__dirname, "../client/build/index.html"));
    });
 
-module.exports = router
+module.exports = router;

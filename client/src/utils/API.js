@@ -26,6 +26,10 @@ export default {
                     // });
     },
 
+    walmartApi: function() {
+        return axios.get("/api/walmart/walmartapi")
+    },
+
     bookmark: function(entryData){
         return axios.post("api/users/bookmark", entryData);
     },
