@@ -21,7 +21,7 @@ class Browse extends Component {
     state = {
     search: "",
     input: "",
-    data: [],  
+    data: [],
     verified: false  
 };
 
@@ -34,11 +34,11 @@ this.searchWebsite_1();
 };
 
 async searchWebsite_1() {
-     API.scrapeAll()
+     API.walmartApi()
      .then( data => {
      this.setState({ data: data.data })
      console.log("After this.setState")
-     console.log("results: res.data ", {data: data})
+     console.log("results: res.data ", {data: data.data})
      console.log("results: res.data.data ", {data: data.data})
      //console.log("results: res.data.data", {results: res.data.data})
      //console.log(res.data)

@@ -1,8 +1,12 @@
 /*eslint-env es6*/
 
-const router = require("express").Router();
-require("./website_1");
-const website_1Routes = require("./website_1");
+import * as express from "express";
+
+const router = express.Router();
+//require("./website_1");
+require("./walmart");
+//const website_1Routes = require("./website_1");
+const walmartRoutes = require("./walmart")
 const users = require("./users");
 
 //Website_1 routes
@@ -13,7 +17,9 @@ const users = require("./users");
 //experimental use
 router.use("/users", users);
 console.log("users routes hit in routes/api/index.js")
-router.use("/website_1", website_1Routes);
+//router.use("/website_1", website_1Routes);
+router.use("/walmart", walmartRoutes);
+console.log("walmart routes hit in routes/api/index.js")
 //router.use("/user", userRoutes); 
 
-module.exports = router
+module.exports = router;

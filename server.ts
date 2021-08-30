@@ -1,17 +1,21 @@
 /*eslint-env es6*/
+
 require("dotenv").config();
-const mongoose = require("mongoose");
+//import mongoose from "mongoose";
 const { MongoClient } = require("mongodb");
-const express = require("express");
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const passport = require("passport");
-const logger = require("morgan");
-const db = require("./models")
+import express from "express";
+//import * as  express from "express";
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import passport from "passport";
+import logger from "morgan";
+//import * as db from "./models";
 const routes = require("./routes");
+//const app  = express.default()
 const app = express();
+
 const PORT = process.env.PORT || 3001;
-const path = require('path');
+import path from 'path';
 //Define middleware here
 app.use(express.json());
 app.use(bodyParser.json());
@@ -39,7 +43,7 @@ console.log("routes:",routes);
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('/*', (req, res) => {
+app.get('/*', (req: any, res: any) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
@@ -72,3 +76,7 @@ run().catch(console.dir);
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+
+//temporary fix until I can add import statements to replace require
+exports = {}

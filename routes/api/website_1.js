@@ -5,7 +5,7 @@ mongoose.set('useFindAndModify', false);
 const router = require("express").Router();
 const website_1Controller = require("../../controllers/website_1controller")
 const Items_1 = require("../../models/items_1");
-require("./website_1_db");
+//require("./website_1_db");
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
