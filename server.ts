@@ -5,12 +5,14 @@ require("dotenv").config();
 const { MongoClient } = require("mongodb");
 import express from "express";
 //import * as  express from "express";
-import cors from 'cors';
+//import cors from 'cors';
+const cors = require('cors');
 import bodyParser from 'body-parser';
 import passport from "passport";
 import logger from "morgan";
 //import * as db from "./models";
 const routes = require("./routes");
+const amazonroutes = require("./amazonroutes")
 //const app  = express.default()
 const app = express();
 
@@ -27,10 +29,19 @@ app.use(passport.initialize());
 //Passport config
 require("./config/passport")(passport);
 
+//  const corsOptions = {
+//   origin: 'http://localhost:3000',
+//   methods: 'GET, POST, OPTIONS, HEAD',
+//   allowedHeaders: 'Content-Type',
+//   credentials: true,
+//   preflightContinue: true,
+//   optionsSuccessStatus: 204
+//  };
 
+//app.options(cors());
 app.use(cors());
-app.use(logger("dev"));
 
+app.use(logger("dev"));
 
 //Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
@@ -39,13 +50,15 @@ if (process.env.NODE_ENV === 'production') {
 
 //Add routes, both API and view
 app.use(routes);
+app.use(amazonroutes);
 console.log("routes:",routes);
+console.log("amazonroutes:", amazonroutes);
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('/*', (req: any, res: any) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+// app.get('/*', (req: any, res: any) => {
+//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
+// });
 
 //Send every other request to the React app
 //Define any API routes before this runs
@@ -62,7 +75,7 @@ const client = new MongoClient(url);
 
 async function run() {
   try {
-      await client.connect({ useUnifiedTopology: true });
+      await client.connect({ useNewUrlParser: true, useUnifiedTopology: true });
       console.log("Connected correctly to server");
   } catch (err) {
       console.log(err.stack);

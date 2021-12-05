@@ -10,10 +10,11 @@ import store from "./store";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Mission from "./pages/Mission";
-import Browse from "./pages/Browse";
+import Main from "./pages/Main";
+//import Browse from "./pages/Browse";
 import Log from "./components/auth/Login";
 import Sign from "./components/auth/Signup";
-import Logout from "./components/auth/Logout"
+import Logout from "./components/auth/Logout";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 
 // import Navbar from "./components/Navbar";
@@ -55,7 +56,8 @@ class App extends Component {
     <Route exact path="/signup" component={Sign} />
     <Route exact path="/login" component={Log} />
     <Route exact path="/mission" component={Mission} />
-    <Route exact path="/browse" component={Browse} />
+    <Route exact path="/main" component={Main} />
+    {/* <Route exact path="/browse" component={Browse} */}
     <Switch>
       <PrivateRoute exact path="/logout" component={Logout} />
     </Switch>
