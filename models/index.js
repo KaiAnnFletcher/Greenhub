@@ -2,7 +2,8 @@
 
 module.exports = {
   User: require("./user"),
-  Items_1: require("./items_1")
+  Items_1: require("./items_1"),
+  Amazon_items: require('./amazon')
 };
 
 

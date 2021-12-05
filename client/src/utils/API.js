@@ -30,6 +30,14 @@ export default {
         return axios.get("/api/walmart/walmartapi")
     },
 
+    amazonsearchapi: function() {
+        return axios.get("/amazonsearchapi")
+    },
+
+    amazongetapi: function() {
+        return axios.get('api/amazon/amazongetapi1/api_1/second_api/amazongetapi')
+    },
+
     bookmark: function(entryData){
         return axios.post("api/users/bookmark", entryData);
     },

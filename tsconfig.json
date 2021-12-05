@@ -14,6 +14,11 @@
           ]
       }
   },
+  "exclude": [
+      "model",
+      "./routes/api/amazon.js",
+      "./routes/api/index.js"
+  ],
   "include": [
       "src/**/*"
   ]
