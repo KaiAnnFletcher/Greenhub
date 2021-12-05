@@ -10,7 +10,7 @@ const amazoncontroller = require("../../../../controllers/amazoncontroller")
 const Amazon_items = require("../../../../models/amazon");
 
 //require('./index');
-const Api = require('../../../../APIclient/src/utils/index')
+const Api = require('../../../../client/src/utils/index')
 const Config = require('../../../../client/src/lib/config')
 const condition = require('../../../../client/src/lib/options').Condition
 const searchIndex = require('../../../../client/src/lib/options').SearchIndex
