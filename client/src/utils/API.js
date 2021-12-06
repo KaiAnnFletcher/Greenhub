@@ -35,7 +35,7 @@ export default {
     },
 
     amazongetapi: function() {
-        return axios.get('/api/amazon/amazongetapi1/api_1/second_api/amazongetapi')
+        return axios.get('/api/second_api/amazongetapi')
     },
 
     bookmark: function(entryData){

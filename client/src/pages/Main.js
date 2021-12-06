@@ -181,14 +181,14 @@ async searchWalmart() {
  async amazonGet() {
     API.amazongetapi()
     .then(response => {
-     this.setState({ response: response.data.data })
+     this.setState({ response: response.data })
      console.log("After this.setState")
-     console.log("results: res.data ", {response: response.data.data})
+     console.log("results: res.data ", {response: response.data})
      //console.log("results: res.data.data ", {response: response.data})
     //console.log("results: res.data.data", {results: res.data.data})
     //console.log(res.data)
-    //.catch(err =>{ console.log(err) })
-    return response.data.data
+    .catch(err =>{ console.log(err) })
+    return response.data
      //});
    })
 };
