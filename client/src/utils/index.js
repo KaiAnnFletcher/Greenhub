@@ -1,4 +1,4 @@
-const ProductAdvertisingAPIv1 = require('../pages/index')
+const ProductAdvertisingAPIv1 = require('../../../sdk/src/index')
 
 class Api {
   constructor (props) {

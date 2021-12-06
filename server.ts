@@ -13,7 +13,7 @@ import logger from "morgan";
 //import * as db from "./models";
 const routes = require("./routes");
 const amazonroutes = require("./amazonroutes")
-const amazonsecondaryroutes = require("./amazonroutes/api/amazonsecondaryroutes")
+//const amazonsecondaryroutes = require("./amazonroutes/api/amazonsecondaryroutes")
 //const app  = express.default()
 const app = express();
 
@@ -52,10 +52,10 @@ if (process.env.NODE_ENV === 'production') {
 //Add routes, both API and view
 app.use(routes);
 app.use(amazonroutes);
-app.use(amazonsecondaryroutes);
+//app.use(amazonsecondaryroutes);
 console.log("routes:",routes);
 console.log("amazonroutes:", amazonroutes);
-console.log("amazonsecondaryroutes", amazonsecondaryroutes);
+//console.log("amazonsecondaryroutes", amazonsecondaryroutes);
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.

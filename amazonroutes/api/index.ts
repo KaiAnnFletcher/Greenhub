@@ -27,12 +27,12 @@
 
 const router = express.Router();
 
-const amazonRoutes1 = require("./amazon")
+//const amazonRoutes1 = require("./amazon")
 
-//const amazonRoutes = require("./second_api")
+const amazonRoutes = require("./second_api")
 
-router.use("/amazon", amazonRoutes1)
+//router.use("/amazon", amazonRoutes1)
 
-//router.use("/second_api", amazonRoutes)
+router.use("/second_api", amazonRoutes)
 
 module.exports = router;
