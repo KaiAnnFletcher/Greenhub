@@ -34,8 +34,14 @@ export default {
         return axios.get("/amazonsearchapi")
     },
 
-    amazongetapi: function() {
-        return axios.get('/api/second_api/amazongetapi')
+    amazonGetApi: function() {
+        return axios.get("/api/second_api/amazongetapi")
+        // .then(function(response) {
+        //         console.log(response)
+        //      })
+        //      .catch(function(error) {
+        //         console.log(error)
+        //  });
     },
 
     bookmark: function(entryData){

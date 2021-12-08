@@ -179,7 +179,7 @@ async searchWalmart() {
 
 
  async amazonGet() {
-    API.amazongetapi()
+    await API.amazonGetApi() 
     .then(response => {
      this.setState({ response: response.data })
      console.log("After this.setState")

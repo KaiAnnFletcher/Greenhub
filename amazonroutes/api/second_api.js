@@ -24,7 +24,7 @@ const promises = []
  */
  myConfig.accessKey = 'AKIAINXLTJNAZHBE' // accessKey
  myConfig.secretKey = '2TVWkJOO1ost5oCglZsO9' // secretKey
- myConfig.partnerTag = 'kaibru01-20' // partnerTag
+ myConfig.partnerTag = 'getaheadphone-20' // partnerTag
 
 /**
  * Initialize the api client
@@ -38,7 +38,7 @@ const api = new Api(myConfig);
  * testGetItemById
  */
   
-  router.get("/amazongetapi", function(req, res, next) {
+  //router.get("/amazongetapi", function(req, res, next) {
   
   const testGetItemById = () => {
   console.log(' ===== find by Item ids =====')
@@ -47,8 +47,9 @@ const api = new Api(myConfig);
   resourceList = resourceList
     .concat(resources.getImagesPrimary)
 
-  const api = new Api(myConfig);
   console.log("Retrieving items from Amazon...")
+
+  router.get("/amazongetapi", function(req, res, next) {
   api.getItemById(['059035342X'], {
     parameters: resourceList,
     condition: condition.Any
@@ -57,9 +58,10 @@ const api = new Api(myConfig);
   }, (error) => {
     console.log('Error: ', error)
   })
-  }
   next()
-})
+  })
+}
+//})
   //Capture the api data and save to database
 // console.log("Capturing data for the database...")
 // if(resources.getItemInfo !== undefined) {
@@ -128,8 +130,9 @@ const testSearch = () => {
 }
 
 //PLEASE UNCOMMENT THE FUNCTIONS BELLOW TO TEST THE DEMO.
-//testSearch()
-//testGetBrowserNode()
-//testGetVariations()
+testGetItemById()
+testSearch()
+testGetBrowserNode()
+testGetVariations()
 
 module.exports = router

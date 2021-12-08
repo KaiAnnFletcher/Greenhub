@@ -4,7 +4,7 @@ const defaultCountry = require('./options').Country
 const resourceList = require('./options').Resources
 
 class Config {
-  constructor (parameters = resourceList.getAll, country = defaultCountry.UnitedStates) {
+  constructor (parameters = resourceList.getAll, country = defaultCountry.Canada) {
     this._accessKey = null
     this._secretKey = null
     this._partnerTag = null
