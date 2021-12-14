@@ -57,11 +57,11 @@ console.log("routes:",routes);
 console.log("amazonroutes:", amazonroutes);
 //console.log("amazonsecondaryroutes", amazonsecondaryroutes);
 
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-// app.get('/*', (req: any, res: any) => {
-//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
-// });
+//The "catchall" handler: for any request that doesn't
+//match one above, send back React's index.html file.
+app.get('/*', (req: any, res: any) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 //Send every other request to the React app
 //Define any API routes before this runs
