@@ -28,7 +28,8 @@
 
 body {
   /* The image used */
-  background-image: url(https://i.pinimg.com/originals/2b/3a/b7/2b3ab7d54dbb6f4ed953209a2e2881ce.jpg);
+  background-color: lightcyan;
+  /*background-image: url(https://i.pinimg.com/originals/2b/3a/b7/2b3ab7d54dbb6f4ed953209a2e2881ce.jpg);*/
  /* Full height */
  height: 100%;
  width: 100%;

@@ -325,7 +325,7 @@ render() {
                     <Navbar />
                     <Jumbotron>
                     <h1>Websites</h1>
-                    <h2>Click on any icon to begin your Search!</h2>
+                    <h2>Here is a sneak peak of what is soon to come!</h2>
                     </Jumbotron>
                 </Col>
                 </Row>
@@ -403,7 +403,7 @@ render() {
                     </List>
                     ) : (
                     <div className = 'StyleBrowseMessage'>
-                    <h5 style={{textAlign: "center"}}>No Results to display at this time. Click an icon or search for an item to get started!</h5>
+                    <h5 style={{textAlign: "center"}}>No Results to display at this time. Click an icon or search for an item to get started (coming soon)!</h5>
                     </div>
                     )}
                 </Col>

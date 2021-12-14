@@ -15,8 +15,8 @@ class Home extends Component {
                 <Col size="md-12">
                     <Navbar />
                     <Jumbotron>
-                    <h1>KAIBRU</h1>
-                    <h2>Your One-stop Hub for Sustainably-sourced Products and Services</h2>
+                    <h1>GREENHUB INC.</h1>
+                    <h2>Your One-stop Hub for Eco-friendly Products and Services</h2>
                     </Jumbotron>
                 </Col>
                 </Row>
@@ -37,22 +37,22 @@ class Home extends Component {
                 Have you found it difficult to commit because you simply do not know your options or where to find them or even keep track of them? <br/>
                 &nbsp;
                 &nbsp;
-                Well, Kaibru is the place you can come to if you would like to find a variety of products or services that are sustainable and safe all in one place!<br/>
+                Well, Greenhub is the place you can come to if you would like to find a variety of products or services that are sustainable and safe all in one place!<br/>
                 &nbsp;
                 &nbsp;
-                Kaibru is a recently deployed web application so it is still in beta phase!<br/>
+                Greenhub is a recently deployed web application so it is still in beta phase!<br/>
                 &nbsp;
                 &nbsp;
-                This means that we are currently only featuring <b>one</b> potential website at the moment.<br/>
+                This means that we are very close to being up and running, but for now, we are still working on tweaking our API deployments.<br/>
                 &nbsp;
                 &nbsp;
-                However, we are in the process of scoping other websites and building them out.<br/>
+                We are in the process of scoping other websites and building them out as well.<br/>
                 &nbsp;
                 &nbsp;
                 While in beta phase, feel free to send us your recommendations (please head over to our "About Us" section for more information on this)<br/>
                 &nbsp;
                 &nbsp;
-                In the meantime, happy browsing and thank you for remembering our environment! <br/>
+                In the meantime, happy browsing with our customized Amazon link below, and thank you for remembering our environment!<br/>
                 &nbsp;
                 &nbsp;  
                 </h5>

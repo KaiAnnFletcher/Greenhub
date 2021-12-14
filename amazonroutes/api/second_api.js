@@ -24,7 +24,7 @@ const promises = []
  */
  myConfig.accessKey = 'AKIAINXLTJNAZHBE' // accessKey
  myConfig.secretKey = '2TVWkJOO1ost5oCglZsO9' // secretKey
- myConfig.partnerTag = 'getaheadphone-20' // partnerTag
+ myConfig.partnerTag = 'kaibru01-20' // partnerTag
 
 /**
  * Initialize the api client
