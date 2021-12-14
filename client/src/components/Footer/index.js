@@ -6,7 +6,7 @@ function Footer() {
   return (
     
     <footer className="footer">
-      <span>KAIBRU 2020 &copy; | Image credit: Art Print by Albert Koetsier</span>
+      <span>GREENHUB INC. 2021 &copy;</span>
     </footer>
   
   );

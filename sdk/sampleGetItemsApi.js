@@ -45,7 +45,7 @@ var api = new ProductAdvertisingAPIv1.DefaultApi();
 var getItemsRequest = new ProductAdvertisingAPIv1.GetItemsRequest();
 
 /** Enter your partner tag (store/tracking id) and partner type */
-getItemsRequest['PartnerTag'] = 'getaheadphone-20';
+getItemsRequest['PartnerTag'] = 'kaibru01-20';
 getItemsRequest['PartnerType'] = 'Associates';
 
 /** Enter the Item IDs for which item information is desired */
