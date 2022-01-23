@@ -97,3 +97,4 @@ app.listen(PORT, () => {
 
 //temporary fix until I can add import statements to replace require
 exports = {}
+export {};
