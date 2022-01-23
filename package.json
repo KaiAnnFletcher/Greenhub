@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "sustainabililty application",
   "main": "server.ts",
+  "type": "module",
   "scripts": {
     "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
