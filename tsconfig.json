@@ -20,7 +20,8 @@
       "./routes/api/index.js"
   ],
   "include": [
-      "src/**/*"
+    "**/*.ts",
+      "src/**/*.ts"
   ]
 }
 
