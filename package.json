@@ -9,7 +9,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "start:prod": "node server.ts",
+    "start:prod": "ts-node server.ts",
     "postinstall": "tsc",
     "watch-node": "nodemon server.ts",
     "watch-ts": "tsc -w",
