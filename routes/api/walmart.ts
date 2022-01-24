@@ -11,6 +11,8 @@ const axios = require("axios");
 const fs = require('fs');
 const path = require('path');
 
+require('dotenv').config();
+
 export interface SecurityHeaders {
     [index: string]: string;
     'WM_SEC.KEY_VERSION': string;
