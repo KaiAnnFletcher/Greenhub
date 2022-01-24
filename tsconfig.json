@@ -17,7 +17,9 @@
   "exclude": [
       "model",
       "./routes/api/amazon.js",
-      "./routes/api/index.js"
+      "./routes/api/index.js",
+      "./private.pem",
+      "./private1.pem"
   ],
   "include": [
     "**/*.ts",
