@@ -17,11 +17,7 @@
   "exclude": [
       "model",
       "./routes/api/amazon.js",
-      "./routes/api/index.js",
-      "./routes/api/walmart.ts",
-      "./app/routes/api/walmart.ts",
-      "./private.pem",
-      "./private1.pem"
+      "./routes/api/index.js"
   ],
   "include": [
     "**/*.ts",
