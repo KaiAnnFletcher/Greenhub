@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 require('dotenv').config();
-let PUBLIC_KEY: any = {};
+
 
 export interface SecurityHeaders {
     [index: string]: string;
@@ -34,7 +34,7 @@ const WM_KEY_PRIVATE =  {
 const CONSUMER_ID = process.env.WM_CONSUMERID;
 const KEY_VERSION = process.env.WM_SECKEY_VERSION;
 //const WM_KEY_PRIVATE = Buffer.from(process.env.WM_KEY_PRIVATE, 'base64');
-PUBLIC_KEY = process.env.PUBLIC_KEY.toString();
+const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
 
 async function generateSecurityHeaders() {
